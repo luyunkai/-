@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::after{
+    box-sizing: border-box;
+}
+*::before{
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-color: rgb(225, 225, 225);
+}
+#div1{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+#div1::before{
+    content: '';
+    display: block;
+    position: absolute;
+}
+#div1::after{
+    content: '';
+    display: block;
+    position: absolute;
+}
+@media (max-width:500px){
+    #html{
+        height: 50vh;
+        overflow: auto;
+    }
+    #div1{
+        position: absolute;
+        top: 75%;
+        left: 50%;
+    }
+}
